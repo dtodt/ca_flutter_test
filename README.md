@@ -19,7 +19,7 @@ You can choose to implement either of the following themes within the provided a
 * **PokeDex:** A mobile application displaying information about various Pokemon characters.
 * **E-shop Listing:** An application showcasing product listings for an e-commerce store.
 
-## Evaluation**
+## Evaluation
 
 After completing your application, provide the GitHub repository URL for evaluation. We will assess your code's adherence to these guidelines, focusing on factors like:
 
