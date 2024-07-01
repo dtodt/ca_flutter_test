@@ -14,10 +14,7 @@ $ flutter create .
 
 ## Project Themes
 
-You can choose to implement either of the following themes within the provided architecture:
-
-* **PokeDex:** A mobile application displaying information about various Pokemon characters.
-* **E-shop Listing:** An application showcasing product listings for an e-commerce store.
+You can choose to implement either of the following [themes](./themes/README.md) within the provided architecture.
 
 ## Evaluation
 
