@@ -4,14 +4,6 @@ This document serves as a reference for developer evaluation during the applicat
 
 > Before you start your test, please read the [architecture](./ARCHITECTURE.md) guide.
 
-## Project Setup
-
-You must fork this repository and create a Flutter project within the root directory.
-
-```sh
-$ flutter create .
-```
-
 ## Project Themes
 
 You can choose to implement either of the following [themes](./themes/README.md) within the provided architecture.
