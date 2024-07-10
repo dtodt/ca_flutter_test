@@ -27,6 +27,70 @@ Adopt the [`Flutterando/minicore`](https://github.com/Flutterando/minicore) clea
 * **Third-Party Packages:** Abstract third-party packages (analytics, geolocation, http) through service contracts (service pattern).
 * **External Data Sources:** Abstract data sources (local storage, remote APIs) via repository contracts (repository pattern). Complex scenarios might introduce a datasource layer within the data layer for further abstraction.
 
+### Naming conventions
+
+Apply these conventions when naming files and classes:
+
+* **Data sources:**
+    * Class name `<Name>DataSource`
+    * File name `<name>_ds.dart`
+    * Folder name `datasources/`
+    * Parent folder name `data`
+* **Data source contracts:**
+    * Class name `I<Name>DataSource`
+    * File name `i_<name>_ds.dart`
+    * Folder name `datasources/`
+    * Parent folder name `interactor`
+* **Data transfer objects (Dtos):**
+    * Class name `<Name>DTO`
+    * File name `<name>_dto.dart`
+    * Folder name `dtos/`
+    * Parent folder name `data` or `interactor`
+* **Entities:**
+    * Class name `<Name>Entity`
+    * File name `<name>_entity.dart`
+    * Folder name `entities/`
+    * Parent folder name `interactor`
+* **Pages:**
+    * Class name `<Name>Page`
+    * File name `<name>_page.dart`
+    * Folder name `pages/`
+    * Parent folder name `ui` or `(public)`
+* **Repositories:**
+    * Class name `<Name>Repository`
+    * File name `<name>_repository.dart`
+    * Folder name `repositories/`
+    * Parent folder name `data`
+* **Repository contracts:**
+    * Class name `I<Name>Repository`
+    * File name `i_<name>_repository.dart`
+    * Folder name `repositories/`
+    * Parent folder name `interactor`
+* **Services:**
+    * Class name `<Name>Service`
+    * File name `<name>_service.dart`
+    * Folder name `services/`
+    * Parent folder name `data` or `interactor`
+* **Use Cases:**
+    * Class name `<Name>UseCase`
+    * File name `<name>_uc.dart`
+    * Folder name `usecases/`
+    * Parent folder name `interactor`
+* **Value Objects:**
+    * Class name `<Name>VO`
+    * File name `<name>_vo.dart`
+    * Folder name `vos/`
+    * Parent folder name `interactor`
+* **Widgets:**
+    * Class name `<Name>Widget`
+    * File name `<name>_widget.dart`
+    * Folder name `widgets/`
+    * Parent folder name `ui`
+
+Keep these files inside the feature that they belong or in a `shared` folder if its use is common.
+
+> Special case for `pages` if using routefly, they are keep inside the `(public)` folder.
+
 ### Testing
 
 * **Unit Tests:** Create unit tests for business logic residing in the interactor layer.
