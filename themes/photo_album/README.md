@@ -12,6 +12,7 @@ These are the pages / features the app should have:
 
 * Splash;
 * Login;
+    * if backend sign in/up is not available, make a local auth with cache;
 * Album list (home);
 * Album details;
 * Favorite albuns;
