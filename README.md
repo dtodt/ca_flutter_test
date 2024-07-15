@@ -1,33 +1,12 @@
 # Conta Azul - Flutter Test
 
-This document serves as a reference for developer evaluation during the application process.
+This repository serves as demonstration for the code interview task provided.
 
-> Before you start your test, please read the [architecture](./ARCHITECTURE.md) guide.
+## READ-ME
 
-## Project Setup
+The progress and content created can be seen in the platforms Notion and Figma, with the URL's bellow.
 
-You must fork this repository and create a Flutter project within the root directory.
+Watch my progress here:
 
-```sh
-$ flutter create .
-```
-
-## Project Themes
-
-You can choose to implement either of the following [themes](./themes/README.md) within the provided architecture.
-
-## Evaluation
-
-After completing your application, provide the GitHub repository URL for evaluation. We will assess your code's adherence to these guidelines, focusing on factors like:
-
-* Code structure and organization
-* Implementation of chosen architecture patterns
-* Code quality and adherence to Flutter best practices
-* Unit test coverage
-* Overall application functionality
-
-By following these guidelines and demonstrating a strong understanding of the principles, you'll increase your chances.
-
-**Note:**
-
-This document serves as a guideline, and some flexibility is allowed. If you have a compelling reason to deviate, feel free to discuss it with the team.
+- [Live Notion Notes URL](https://www.notion.so/vfthome/Conta-Azul-Flutter-Test-978400d03dc641e88a7b0d7717f54ff7?pvs=4)
+- [Live Figma Project URL](https://www.figma.com/design/ih1CrRG72WDo9BhaG3OZvf/Conta-Azul---Flutter-Test?node-id=0-1&t=c6yYz5VyncEA2mWQ-1)
