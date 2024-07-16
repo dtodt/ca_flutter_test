@@ -1,5 +1,5 @@
 name: ca_flutter_test
-description: "A new Flutter project."
+description: "Conta Azul - Flutter Test"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -31,24 +31,82 @@ dependencies:
   flutter:
     sdk: flutter
 
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
 
+  #! --- PACKAGES ---
+  #? --- CORE
+  # STATE MANAGEMENT:
+  # Reference: https://asp.flutterando.com.br/docs/introduction/getting-started
+  asp: ^2.0.0
+  # ROUTING AND INJECTION:
+  # Reference: https://www.youtube.com/watch?v=EdHbE817gyo
+  flutter_modular: ^6.3.4
+  #? --- ICON AND SPLASH ART
+  # CHANGE DEFAULT NATIVE SPLASH SCREEN:
+  # Reference: https://www.youtube.com/watch?v=x0a6_ILbvAk
+  flutter_native_splash: ^2.4.1
+  # CHANGE DEFAULT APP ICON:
+  # Reference: https://www.youtube.com/watch?v=_GdG4u7hfAM
+  flutter_launcher_icons: ^0.13.1
+  #? --- ...
+
+#! --- DEVELOPMENT DEPENDENCIES ---
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
+  #? --- ASSETS CLASS
+  # REQUIRED BY FLUTTER_GEN_RUNNER:
+  build_runner: ^2.4.11
+  # ASSET CLASS GENERATION:
+  flutter_gen_runner: ^5.6.0
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
+#! --- PACKAGES CONFIGURATIONS ---
+#? Must be at 1st level of pubspec.yaml indentation
+# FLUTTER GEN RUNNER (ASSETS CLASS GENERATION):
+flutter_gen:
+  output: lib/shared/assets/ # Optional (default: lib/gen/)
+  line_length: 80 # Optional (default: 80)
+  # Optional
+  integrations:
+    flutter_svg: true
+    flare_flutter: true
+    rive: true
+    lottie: true
+# FLUTTER NATIVE SPLASH:
+flutter_native_splash:
+  color: "#00B2F6"
+  android_12:
+    # Splash screen background color.
+    color: "#00B2F6"
+    image: "assets/images/app_icon_android_12.png"
+    icon_background_color: "#00B2F6"
+# FLUTTER LAUNCHER ICONS:
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  remove_alpha_ios: true
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "path/to/image.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "path/to/image.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "path/to/image.png"
 
 # The following section is specific to Flutter packages.
 flutter:
@@ -58,33 +116,100 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  #! --- CUSTOM ASSETS ---
+  assets:
+  # IMAGES
+    - assets/images/
+  # FONTS
+    - assets/fonts/
+  # SVG
+    - assets/svg/
 
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware
+  #! --- CUSTOM FONTS ---
+  fonts:
+  #? Housechka Pro - Font Family
+    - family: HouschkaPro
+      fonts:
+      # EXTRA BOLD
+        - asset: assets/fonts/HouschkaPro-ExtraBold.ttf
+          style: normal
+          weight: 800
+        - asset: assets/fonts/HouschkaPro-ExtraBoldItalic.ttf
+          style: italic
+          weight: 800
+      # BOLD
+        - asset: assets/fonts/HouschkaPro-Bold.ttf
+          style: normal
+          weight: 700
+        - asset: assets/fonts/HouschkaPro-BoldItalic.ttf
+          style: italic
+          weight: 700
+      # SEMI BOLD
+        - asset: assets/fonts/HouschkaPro-DemiBold.ttf
+          style: normal
+          weight: 600
+        - asset: assets/fonts/HouschkaPro-DemiBoldItalic.ttf
+          style: italic
+          weight: 600
+      # MEDIUM
+        - asset: assets/fonts/HouschkaPro-Medium.ttf
+          style: normal
+          weight: 500
+        - asset: assets/fonts/HouschkaPro-MediumItalic.ttf
+          style: italic
+          weight: 500
+      # LIGHT
+        - asset: assets/fonts/HouschkaPro-Light.ttf
+          style: normal
+          weight: 300
+        - asset: assets/fonts/HouschkaPro-LightItalic.ttf
+          style: italic
+          weight: 300
+      # THIN
+        - asset: assets/fonts/HouschkaPro-Thin.ttf
+          style: normal
+          weight: 100
+        - asset: assets/fonts/HouschkaPro-ThinItalic.ttf
+          style: italic
+          weight: 100
 
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
+#! ------------------------------------------------------------------------------------------------------
+#! ------------------------ COMMAND LINE USAGE OF SPECIFIC PACKAGES -------------------------------------
+#! ------------------------------------------------------------------------------------------------------
 
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+#! ----------------------------------------------------------
+#! ---------------------- ASSETS GEN ------------------------
+#! ----------------------------------------------------------
+#? Command used to generate the asset class with flutter_gen:
+#  dart run build_runner build
+#! ----------------------------------------------------------
+#! ----------------------- APP NAME -------------------------
+#! ----------------------------------------------------------
+#? Command used to change the application name on the device:
+#  flutter pub global run rename --appname "APP_NAME_HERE"
+#! ----------------------------------------------------------
+#! ----------------------- APP ICON -------------------------
+#! ----------------------------------------------------------
+#? Command used to change the application icon:
+#  dart run flutter_launcher_icons
+#! ----------------------------------------------------------
+#! --------------------- NATIVE SPLASH ----------------------
+#! ----------------------------------------------------------
+#? Command used to update changes made to application native splash screen:
+#  dart run flutter_native_splash:create
+#! ----------------------------------------------------------
+#! --------------------- APP BUNDLE ID ----------------------
+#! ----------------------------------------------------------
+#? Command used to modify the BUNDLE ID of the application, where my_website.com and application_name are the new values:
+#  flutter pub global run rename --bundleId com.website_name.app_name
+#! ----------------------------------------------------------
+#! --------------------- APP PROFILING ----------------------
+#! ----------------------------------------------------------
+#? VSCODE Command (CTRL SHIFT P or COMAND SHIFT P) used to open dart devtools for application profiling:
+#  devtools
+#! ----------------------------------------------------------
+#! ------------ APP BUNDLE GENERATION - ANDROID -----------
+#! ----------------------------------------------------------
+#? MUST CHANGE ANDROID > KEY.PROPERTIES if the "upload-keystore.jks" changes location!
+#? Builds application .aab file for android app bundle releases:
+#  flutter build appbundle
