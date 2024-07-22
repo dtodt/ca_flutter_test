@@ -1,5 +1,5 @@
 import 'package:asp/asp.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/services/i_onboarding_service.dart';
+import 'package:ca_flutter_test/src/features/onboarding/interactor/services/i_onboarding_controller_service.dart';
 import 'package:ca_flutter_test/src/features/onboarding/ui/widgets/company_logo.dart';
 import 'package:ca_flutter_test/src/features/onboarding/ui/widgets/conta_azul_leafs.dart';
 import 'package:ca_flutter_test/src/features/onboarding/ui/widgets/next_button.dart';
@@ -42,7 +42,7 @@ class _OnboardingPageState extends State<OnboardingPage>
         onboardingService.scrollEvent(
           currentPage: (_controller.page ?? 0).round(),
         );
-        onboardingService.handleButtonVisibility();
+        onboardingService.buttonVisibility();
       },
     );
   }

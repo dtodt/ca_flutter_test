@@ -1,6 +1,6 @@
 import 'package:asp/asp.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/services/i_onboarding_service.dart';
+import 'package:ca_flutter_test/src/features/onboarding/interactor/services/i_onboarding_controller_service.dart';
 import 'package:ca_flutter_test/src/shared/design_system/design_system.dart';
 import 'package:ca_flutter_test/src/shared/modules/responsive_layout/constants/k_device_size.dart';
 import 'package:ca_flutter_test/src/shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';

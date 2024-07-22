@@ -1,13 +1,13 @@
 import 'package:asp/asp.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/dtos/onboarding_event_dto.dart';
+import 'package:ca_flutter_test/src/features/onboarding/interactor/entities/onboarding_event_dto.dart';
 import 'package:ca_flutter_test/src/features/onboarding/interactor/entities/onboarding_state_entity.dart';
 import 'package:ca_flutter_test/src/features/onboarding/interactor/repositories/i_onboarding_repository.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/services/i_onboarding_service.dart';
+import 'package:ca_flutter_test/src/features/onboarding/interactor/services/i_onboarding_controller_service.dart';
+import 'package:ca_flutter_test/src/features/onboarding/interactor/use_cases/button_visibility_uc.dart';
 import 'package:ca_flutter_test/src/features/onboarding/interactor/use_cases/click_enter_button_uc.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/use_cases/click_left_arrow_uc.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/use_cases/click_right_arrow_uc.dart';
+import 'package:ca_flutter_test/src/features/onboarding/interactor/use_cases/click_next_button_uc.dart';
+import 'package:ca_flutter_test/src/features/onboarding/interactor/use_cases/click_previous_button_uc.dart';
 import 'package:ca_flutter_test/src/features/onboarding/interactor/use_cases/click_skip_button_uc.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/use_cases/handle_button_visibility.dart';
 import 'package:ca_flutter_test/src/features/onboarding/interactor/use_cases/onboarding_scroll_event_uc.dart';
 
 class OnboardingControllerService implements IOnboardingControllerService {
@@ -25,7 +25,7 @@ class OnboardingControllerService implements IOnboardingControllerService {
     atomAction((set) {
       set(
         _state.onboardingContentAtom,
-        _repository.getPageContents(),
+        _repository.getDefaultPageContents(),
       );
     }).call();
   }
@@ -43,14 +43,14 @@ class OnboardingControllerService implements IOnboardingControllerService {
   @override
   void clickPreviousButton() {
     // Handle event and update current state.
-    ClickLeftArrowUseCase().handleEvent();
+    ClickPreviousButtonUseCase().handleEvent();
   }
 
   //* CLICK RIGHT ARROW
   @override
   void clickNextButton() {
     // Handle event and update current state.
-    ClickRightArrowUseCase().handleEvent();
+    ClickNextButtonUseCase().handleEvent();
   }
 
   //* CLICK SKIP BUTTON
@@ -64,13 +64,13 @@ class OnboardingControllerService implements IOnboardingControllerService {
   @override
   void scrollEvent({required int currentPage}) {
     OnboardingScrollEventUseCase()
-        .handleEvent(event: OnboardingEventDTO(currentPage: currentPage));
+        .handleEvent(event: OnboardingEventEntity(currentPage: currentPage));
   }
 
-  //* HANDLE BUTTON VISIBILITY
+  //* BUTTON VISIBILITY
   @override
-  void handleButtonVisibility() {
-    HandleButtonVisibilityUseCase().handleEvent();
+  void buttonVisibility() {
+    ButtonVisibilityUseCase().handleEvent();
   }
 
   //* --- STATE GETTER ---

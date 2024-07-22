@@ -1,7 +1,7 @@
-class OnboardingEventDTO {
+class OnboardingEventEntity {
   final int currentPage;
 
-  OnboardingEventDTO({
+  OnboardingEventEntity({
     required this.currentPage,
   });
 }

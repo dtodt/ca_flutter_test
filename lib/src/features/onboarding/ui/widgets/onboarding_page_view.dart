@@ -1,5 +1,5 @@
 import 'package:asp/asp.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/services/i_onboarding_service.dart';
+import 'package:ca_flutter_test/src/features/onboarding/interactor/services/i_onboarding_controller_service.dart';
 import 'package:ca_flutter_test/src/features/onboarding/ui/widgets/onboarding_body.dart';
 import 'package:ca_flutter_test/src/features/onboarding/ui/widgets/onboarding_title.dart';
 import 'package:ca_flutter_test/src/shared/design_system/design_system.dart';

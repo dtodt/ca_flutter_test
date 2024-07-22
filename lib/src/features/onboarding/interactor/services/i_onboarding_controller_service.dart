@@ -8,5 +8,5 @@ abstract class IOnboardingControllerService
   void clickSkipButton();
   void clickEnterButton();
   void scrollEvent({required int currentPage});
-  void handleButtonVisibility();
+  void buttonVisibility();
 }

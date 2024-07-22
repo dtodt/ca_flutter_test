@@ -5,7 +5,7 @@ import 'package:ca_flutter_test/src/features/onboarding/data/services/onboarding
 import 'package:ca_flutter_test/src/features/onboarding/interactor/datasources/i_onboarding_datasource.dart';
 import 'package:ca_flutter_test/src/features/onboarding/interactor/entities/onboarding_state_entity.dart';
 import 'package:ca_flutter_test/src/features/onboarding/interactor/repositories/i_onboarding_repository.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/services/i_onboarding_service.dart';
+import 'package:ca_flutter_test/src/features/onboarding/interactor/services/i_onboarding_controller_service.dart';
 import 'package:ca_flutter_test/src/features/onboarding/ui/pages/onboarding_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 

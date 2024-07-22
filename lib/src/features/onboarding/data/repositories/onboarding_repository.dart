@@ -10,7 +10,7 @@ class OnboardingRepository implements IOnboardingRepository {
   }) : _onboardingDatasource = onboardingDatasource;
 
   @override
-  List<OnboardingPageContentsDTO> getPageContents() {
+  List<OnboardingPageContentsDTO> getDefaultPageContents() {
     return _onboardingDatasource.getDefaultContents();
   }
 }
