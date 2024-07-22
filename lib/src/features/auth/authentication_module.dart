@@ -9,11 +9,11 @@ class AuthModule extends Module {
 
   @override
   void routes(RouteManager r) {
+    // Sign Up
+    r.child('/', child: (context) => const SignUpPage());
+
     // Login
     r.child('/login', child: (context) => const LoginPage());
-
-    // Sign Up
-    r.child('/sign-up', child: (context) => const SignUpPage());
 
     // Wildcard Route - Error 404
     r.wildcard(

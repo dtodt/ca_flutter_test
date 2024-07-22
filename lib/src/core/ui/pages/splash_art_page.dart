@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:ca_flutter_test/src/core/routes/routes.dart';
 import 'package:ca_flutter_test/src/shared/design_system/design_system.dart';
 import 'package:ca_flutter_test/src/shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
 import 'package:ca_flutter_test/src/shared/modules/responsive_layout/ui/responsive_layout.dart';
@@ -28,7 +29,7 @@ class _SplashArtState extends State<SplashArt>
     Timer(
       const Duration(milliseconds: 3300),
       () {
-        Modular.to.navigate('/onboarding');
+        Modular.to.navigate(const Routes().onboarding);
       },
     );
   }

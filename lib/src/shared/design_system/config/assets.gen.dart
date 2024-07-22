@@ -143,6 +143,9 @@ class $AssetsSvgGen {
   SvgGenImage get heartOutline =>
       const SvgGenImage('assets/svg/heart_outline.svg');
 
+  /// File path: assets/svg/logo.svg
+  SvgGenImage get logo => const SvgGenImage('assets/svg/logo.svg');
+
   /// File path: assets/svg/logo_1.svg
   SvgGenImage get logo1 => const SvgGenImage('assets/svg/logo_1.svg');
 
@@ -174,6 +177,7 @@ class $AssetsSvgGen {
         filter,
         heartFill,
         heartOutline,
+        logo,
         logo1,
         logo2,
         logoLeafs,

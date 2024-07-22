@@ -1,4 +1,4 @@
-import 'package:ca_flutter_test/src/shared/modules/http_client/interactor/services/i_http_client_service.dart';
+import 'package:ca_flutter_test/src/shared/modules/internet/interactor/services/i_http_client_service.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 

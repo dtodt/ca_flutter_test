@@ -1,4 +1,6 @@
 PODS:
+  - device_info_plus (0.0.1):
+    - FlutterMacOS
   - Firebase/Auth (10.25.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 10.25.0)
@@ -53,6 +55,7 @@ PODS:
   - PromisesObjC (2.4.0)
 
 DEPENDENCIES:
+  - device_info_plus (from `Flutter/ephemeral/.symlinks/plugins/device_info_plus/macos`)
   - firebase_auth (from `Flutter/ephemeral/.symlinks/plugins/firebase_auth/macos`)
   - firebase_core (from `Flutter/ephemeral/.symlinks/plugins/firebase_core/macos`)
   - FlutterMacOS (from `Flutter/ephemeral`)
@@ -69,6 +72,8 @@ SPEC REPOS:
     - PromisesObjC
 
 EXTERNAL SOURCES:
+  device_info_plus:
+    :path: Flutter/ephemeral/.symlinks/plugins/device_info_plus/macos
   firebase_auth:
     :path: Flutter/ephemeral/.symlinks/plugins/firebase_auth/macos
   firebase_core:
@@ -77,6 +82,7 @@ EXTERNAL SOURCES:
     :path: Flutter/ephemeral
 
 SPEC CHECKSUMS:
+  device_info_plus: ce1b7762849d3ec103d0e0517299f2db7ad60720
   Firebase: 0312a2352584f782ea56f66d91606891d4607f06
   firebase_auth: e102811c55546b05d1db96ae9af577090e4fb687
   firebase_core: b5b8b60dad71f93132bbaa21e8d1379367d824f0

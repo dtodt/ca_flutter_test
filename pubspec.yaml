@@ -67,6 +67,7 @@ dependencies:
   auto_size_text: ^3.0.0
   vibration: ^1.9.0
   flutter_animate: ^4.5.0
+  equatable: ^2.0.5
 
 #! --- DEVELOPMENT DEPENDENCIES ---
 dev_dependencies:
